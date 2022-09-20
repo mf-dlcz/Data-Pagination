@@ -3,8 +3,6 @@ Treehouse Techdegree:
 FSJS Project 2 - Data Pagination and Filtering
 */
 
-
-
 /*
 For assistance:
    Check out the "Project Resources" section of the Instructions tab: https://teamtreehouse.com/projects/data-pagination-and-filtering#instructions
@@ -17,7 +15,19 @@ For assistance:
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
 */
+function showPage(list, page) {
+startIndex = `(${page} * list.length) - list.length`;
+endIndex = `(${page} * list.length)`;
+const studentList = document.getElementsByClassName('student-list');
 
+studentList.innerHTML = '';
+
+for (let i = 0; i < list.length; i++ ) {
+   if(i >= startIndex & i <= endIndex ){
+         
+      }
+   }
+}
 
 
 /*

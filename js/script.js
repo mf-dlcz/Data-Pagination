@@ -19,7 +19,6 @@ function showPage(list, page) {
 startIndex = (page * 9) - 9;
 endIndex = page * 9;
 const studentList = document.querySelector('.student-list');
-console.log(studentList);
 studentList.innerHTML = '';
 
 for (let i = 0; i < list.length; i++ ) {
@@ -46,3 +45,22 @@ showPage(data, 1);
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
+
+function addPagination(list) {
+
+const paginationButton = Math.ceil(list.length / 9);
+const linkList = document.getElementsByClassName('link-list')[0];
+linkList.innerHTML = '';
+
+for(let i=0; i < paginationButton; i++) {
+   const liButton = document.createElement('li');
+   const buttonTag = document.createElement('button');
+   buttonTag.type = 'button';
+   buttonTag.innerHTML = `${+ 1}`;
+   linkList.append(liButton);
+   liButton.append(buttonTag);
+   }
+
+}
+
+addPagination(data);

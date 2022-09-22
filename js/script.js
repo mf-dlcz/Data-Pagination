@@ -22,7 +22,6 @@ const studentList = document.querySelector('.student-list');
 studentList.innerHTML = '';
 
 for (let i = 0; i < list.length; i++ ) {
-   [console.log(list[i])]
    if(i >= startIndex && i <= endIndex){
       
    let studentInfo = `  <li class="student-item cf">
@@ -47,18 +46,16 @@ This function will create and insert/append the elements needed for the paginati
 */
 
 function addPagination(list) {
-
-const paginationButton = Math.ceil(list.length / 9);
-const linkList = document.getElementsByClassName('link-list')[0];
+const numOfPages = Math.ceil(list.length / 9);
+const linkList = document.querySelector('ul.link-list');
 linkList.innerHTML = '';
 
-for(let i=0; i < paginationButton; i++) {
-   const liButton = document.createElement('li');
-   const buttonTag = document.createElement('button');
-   buttonTag.type = 'button';
-   buttonTag.innerHTML = `${+ 1}`;
-   linkList.append(liButton);
-   liButton.append(buttonTag);
+for(let i = 1; i <= numOfPages; i++) {
+   const button = `<li>
+                  <button type='button'>${i}</button>
+                  </li>`;
+   linkList.insertAdjacentHTML('beforeend', button);
+   //console.log(button)                  
    }
 
 }

@@ -22,7 +22,7 @@ const studentList = document.querySelector('.student-list');
 studentList.innerHTML = '';
 
 for (let i = 0; i < list.length; i++ ) {
-   if(i >= startIndex && i <= endIndex){
+   if(i >= startIndex && i < endIndex){
       
    let studentInfo = `  <li class="student-item cf">
                         <div class="student-details">
@@ -57,7 +57,8 @@ for(let i = 1; i <= numOfPages; i++) {
    linkList.insertAdjacentHTML('beforeend', button);
    //console.log(button)                  
    }
-
+const firstButton = document.querySelector('.link-list button');
+firstButton
 }
 
 addPagination(data);

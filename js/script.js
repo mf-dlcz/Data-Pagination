@@ -38,15 +38,13 @@ for (let i = 0; i < list.length; i++ ) {
       }
    }
 }
-showPage(data, 1);
-
 /*
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
 */
 
 function addPagination(list) {
-const numOfPages = Math.ceil(list.length / 9);
+const numOfPages = Math.ceil( list.length / 9 );
 const linkList = document.querySelector('ul.link-list');
 linkList.innerHTML = '';
 
@@ -58,7 +56,18 @@ for(let i = 1; i <= numOfPages; i++) {
    //console.log(button)                  
    }
 const firstButton = document.querySelector('.link-list button');
-firstButton
-}
+firstButton.className = 'active';
 
+linkList.addEventListener('click', (e) => {
+   if(e.target.tagName === 'BUTTON') {
+      const activeClass = document.querySelector('active');
+      activeClass.className = '';
+      
+
+   }
+
+})
+
+}
+showPage(data, 1);
 addPagination(data);

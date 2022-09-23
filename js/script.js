@@ -48,6 +48,7 @@ const numOfPages = Math.ceil( list.length / 9 );
 const linkList = document.querySelector('ul.link-list');
 linkList.innerHTML = '';
 
+//Loops through the number of pages
 for(let i = 1; i <= numOfPages; i++) {
    const button = `<li>
                   <button type='button'>${i}</button>
@@ -58,16 +59,18 @@ for(let i = 1; i <= numOfPages; i++) {
 const firstButton = document.querySelector('.link-list button');
 firstButton.className = 'active';
 
+//Event Listener checkes for user clicks
 linkList.addEventListener('click', (e) => {
-   if(e.target.tagName === 'BUTTON') {
-      const activeClass = document.querySelector('active');
+   if( e.target.tagName === 'BUTTON' ) {
+      const activeClass = document.getElementsByClassName('active');
       activeClass.className = '';
-      
+
 
    }
 
 })
 
+//Calling my functions
 }
 showPage(data, 1);
 addPagination(data);

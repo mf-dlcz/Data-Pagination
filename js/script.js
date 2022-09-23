@@ -23,7 +23,8 @@ studentList.innerHTML = '';
 
 for (let i = 0; i < list.length; i++ ) {
    if(i >= startIndex && i < endIndex){
-      
+   
+   //Diplays this information for each student
    let studentInfo = `  <li class="student-item cf">
                         <div class="student-details">
                         <img class="avatar" src="${list[i].picture.medium}" alt="Profile Picture">
@@ -62,12 +63,11 @@ firstButton.className = 'active';
 //Event Listener checkes for user clicks
 linkList.addEventListener('click', (e) => {
    if( e.target.tagName === 'BUTTON' ) {
-      const activeClass = document.getElementsByClassName('active');
+      let activeClass = document.querySelector('.active');
       activeClass.className = '';
-
-
+      e.target.className = 'active';
+      showPage(list, e.target.textContent);
    }
-
 })
 
 //Calling my functions

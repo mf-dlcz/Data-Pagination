@@ -11,7 +11,7 @@
 
 ## Project Overview
 
-This project showcases my city.
+This project taught me how to display a list of student information in different pages.
 
 ![website screenshot](/examples/example-meets.png)
 
@@ -21,7 +21,7 @@ This project showcases my city.
 
 ## Technologies Used
 
-The project taught me how to display a list of student information in different pages.
+The project utilizes the following technologies and features:
 
 - HTML
 - CSS

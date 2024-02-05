@@ -21,7 +21,7 @@ This project showcases my city.
 
 ## Technologies Used
 
-The project utilizes the following technologies and features:
+The project taught me how to display a list of student information in different pages.
 
 - HTML
 - CSS
